@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Tokket.Views.LoginSignUpPage"
+               xmlns:views="clr-namespace:Tokket.Views.Control"
+             Title="LoginSignUpPage">
+    <ContentPage.Content>
+        <Grid ColumnDefinitions="*" RowDefinitions="*">
+            <Image
+                Grid.Row="0"
+                Aspect="Fill"
+                Source="bg_classtok.png"
+                VerticalOptions="Fill" />
+            <StackLayout
+                    Padding="{OnIdiom Phone=40,
+                                      Tablet=100}"
+                    BackgroundColor="Transparent"
+                    Spacing="5"
+                    VerticalOptions="Center">
+                <Image
+                        Aspect="AspectFit"
+                        HeightRequest="{OnIdiom Phone=50,
+                                                Tablet=150}"
+                        Source="classtok_text.png" />
+
+
+                <StackLayout x:Name="SignUpAsIndividualUI" IsVisible="True">
+
+                    <Entry
+                            x:Name="txtEmail"
+                            FontSize="Header"
+                            HeightRequest="{OnIdiom Phone=40,
+                                                    Tablet=70}"
+                            Placeholder="Email"
+                            ReturnType="Next"
+                            Text="{Binding Email, Mode=TwoWay}"/>
+                    <Label
+                            x:Name="emailErrorLabel"
+                            FontSize="15"
+                            HorizontalTextAlignment="Start"
+                            IsVisible="false"
+                            Text="Email already in use."
+                            TextColor="Red" />
+                    <Label
+                            x:Name="emailInvalidLabel"
+                            FontSize="15"
+                            HorizontalTextAlignment="Start"
+                            IsVisible="false"
+                            Text="Not a valid email."
+                            TextColor="Red" />
+                    <Entry
+                            x:Name="txtPasswordLogin"
+                            FontSize="Header"
+                            HeightRequest="{OnIdiom Phone=40,
+                                                    Tablet=70}"
+                            IsPassword="True"
+                            IsVisible="{Binding IsLoginMode, Mode=TwoWay, FallbackValue=True}"
+                            Placeholder="Password"
+                            ReturnCommand="{Binding LoginCommand}"
+                            ReturnType="Done"
+                            Text="{Binding Password, Mode=TwoWay}" />
+
+                    <Button
+                            x:Name="btnLogin"
+                            Command="{Binding LoginCommand}"
+                            HeightRequest="60"
+                            IsVisible="{Binding IsLoginMode, Mode=TwoWay, FallbackValue=True}"
+                            Text="Login"
+                            VerticalOptions="Center" />
+                    <Button
+                            x:Name="btnGoToForgotPassword"
+                            BackgroundColor="Transparent"
+                            BorderColor="Transparent"
+                            HeightRequest="50"
+                            IsVisible="{Binding IsLoginMode, Mode=TwoWay, FallbackValue=True}"
+                            Text="Forgot your password?"
+                            TextColor="Black"
+                            TextTransform="None" />
+                    <Button
+                            x:Name="btnGoToSignUp"
+                            BackgroundColor="Transparent"
+                            BorderColor="Transparent"
+                            Command="{Binding GoToSignUpCommand}"
+                            IsVisible="{Binding IsLoginMode, Mode=TwoWay, FallbackValue=True}"
+                            Text="Not registered yet? Sign Up"
+                            TextColor="Black"
+                            TextTransform="None" />
+                </StackLayout>
+
+            </StackLayout>
+            <views:WaitingView
+                x:Name="waitingView"
+                HorizontalOptions="Center"
+                InputTransparent="False"
+                IsVisible="{Binding IsLoading}"
+                VerticalOptions="Center" />
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

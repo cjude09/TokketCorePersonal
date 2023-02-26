@@ -1,0 +1,86 @@
+
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+    <LinearLayout             
+        android:id="@+id/LinearGame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#e9ecef">
+        <ImageView
+            android:id="@+id/imgViewLogo"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:scaleType="fitCenter"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/tokblitz"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider"/>
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:gravity="center"
+            android:text="Tok Blitz"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider"/>
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:flexWrap="wrap"
+            app:alignItems="center"
+            app:alignContent="center"
+            app:justifyContent="center"
+            app:layout_flexBasisPercent="100%">    
+            <Button
+                android:id="@+id/btnViewGameSet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="View Game Set"
+                android:padding="10dp"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/red_500"
+                app:layout_flexBasisPercent="50%"/>
+            <Button
+                android:id="@+id/btnAddGameSet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="+ Add Game Set"
+                android:padding="10dp"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:backgroundTint="@color/colorAccent"
+                app:layout_flexBasisPercent="50%"/>            
+            <Button
+                android:id="@+id/btnViewMyGameSet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="View My Game Sets"
+                android:padding="10dp"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"                 
+                android:backgroundTint="@color/red_500"
+                app:layout_flexBasisPercent="50%"/>
+
+        </com.google.android.flexbox.FlexboxLayout>
+    </LinearLayout>
+</LinearLayout>

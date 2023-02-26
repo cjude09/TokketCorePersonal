@@ -1,0 +1,282 @@
+                                                   
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <com.google.android.flexbox.FlexboxLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		app:flexWrap="nowrap"
+		app:alignItems="flex_start"
+		app:alignContent="flex_start"
+		app:justifyContent="flex_start"
+		app:layout_flexBasisPercent="100%">
+        
+	</com.google.android.flexbox.FlexboxLayout>
+
+    <TextView
+        android:id="@+id/TextNothingFoundAttendTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:visibility="gone"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:text="An Error Occured. Please Try again"
+        android:background="#3498DB"
+        android:padding="10dp"/>
+<!--
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshRecyclerAttendTeacher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+        
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+-->
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerAttendListTeacher"  
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingBottom="?android:attr/actionBarSize"
+            android:scrollbarStyle="outsideOverlay"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:divider="@android:color/transparent"
+            android:layout_marginTop="?attr/actionBarSize"/>
+    <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         android:gravity="center"         
+         android:layout_marginTop="20dp"
+         app:layout_anchor="@+id/RecyclerAttendListTeacher"
+         app:layout_anchorGravity="center|top">
+         
+            <ProgressBar
+            android:id="@+id/bottomProgressAttendTeacher"
+            android:theme="@style/CircularProgressBlue"
+            style="@style/Widget.AppCompat.ProgressBar"  
+            android:layout_marginBottom="60dp"
+            android:layout_height="26dp"
+            android:layout_width="26dp"
+            android:visibility="invisible"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearProgressAttendTeacher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        app:layout_anchorGravity="center|top"
+        android:backgroundTint="#80000000"
+        android:background="@drawable/tileview_layout">
+        <TextView
+            android:id="@+id/progressBarinsideTextAttendTeacher"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading..."
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:padding="5dp"/>
+        <ProgressBar
+            android:id="@+id/progressbarAttendTeacher"
+            android:theme="@style/CircularProgressBlue"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_height="86dp"
+            android:layout_width="86dp"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:padding="5dp"/>
+    </LinearLayout>
+  
+    <LinearLayout
+        android:id="@+id/AttendTeacherBtnStartDiv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        app:layout_anchorGravity="center|bottom"
+        android:backgroundTint="#80000000"
+        android:background="@drawable/tileview_layout"
+        android:visibility="gone">
+        <Button
+            android:id="@+id/AttendTeacherBtnStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Start Game"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:padding="5dp"
+            android:background="@android:color/holo_green_light"
+            />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/GameOverText"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="10dp"
+        >
+        
+         <TextView
+            android:id="@+id/textGameO"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Game Over!"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:padding="2dp"
+            android:background="#FF8DA1"
+            android:textAlignment="center"
+           />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/TeacherGamePlayDiv"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:orientation="horizontal"
+        android:background="#0B98F6"
+        android:visibility="gone"
+        android:layout_marginTop="10dp">
+       
+      <TextView
+            android:layout_weight="16"
+            android:id="@+id/DisplayNameId"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Name"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:padding="2dp"
+            android:background="#0B98F6"
+            />
+
+      <TextView
+            android:layout_weight="16"
+            android:id="@+id/TotalPoints"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Points"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:padding="2dp"
+            android:background="#0B98F6"/>
+
+         <TextView
+            android:layout_weight="16"
+            android:id="@+id/QAnswered"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Round"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center_vertical|right"
+            android:padding="2dp"
+            android:background="#0B98F6"
+            android:textAlignment="center"/>
+
+         <TextView
+            android:layout_weight="16"
+            android:id="@+id/CAnswers"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Correct Answers"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center_vertical|right"
+            android:padding="2dp"
+            android:background="#0B98F6"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_weight="16"
+            android:id="@+id/QActive"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Active"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:padding="2dp"
+            android:background="#0B98F6"/>
+
+        <TextView
+            android:layout_weight="16"
+            android:id="@+id/QFinished"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Finished"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:padding="2dp"
+            android:background="#0B98F6"/>
+
+
+    </LinearLayout>
+<!--
+       <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshRecyclerAttendTeacherAfter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:visibility="gone">
+       
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+-->
+     <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerAttendListTeacherAfter"  
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingBottom="?android:attr/actionBarSize"
+            android:scrollbarStyle="outsideOverlay"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:divider="@android:color/transparent"
+            android:visibility="gone"
+            android:layout_marginTop="?attr/actionBarSize"/>
+
+       <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         android:gravity="center"         
+         android:layout_marginTop="20dp"
+         app:layout_anchor="@+id/RecyclerAttendListTeacherAfter"
+         app:layout_anchorGravity="center|top">
+         
+            
+    </LinearLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

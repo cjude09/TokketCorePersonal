@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+     android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="100"
+    android:paddingTop="10dp">
+    
+        <FrameLayout
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            >
+        <CheckBox
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:checked="true"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:id="@+id/checkboxGame"/>
+
+        </FrameLayout>
+        
+    
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="25"
+        android:text="This is the primary text"
+        android:textColor="#000"
+        android:id="@+id/PrimaryTextGame"/>
+    
+      <FrameLayout
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="25"
+            >
+       
+     <Button
+        android:id="@+id/BtnGameIsPlayable"    
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="Yes"
+       android:textColor="@android:color/white"
+        android:textAlignment="center"
+        android:backgroundTint="@color/forestgreen"
+        android:background="@drawable/rounded_button_white_bg"
+                android:gravity="center"
+                android:layout_gravity="center"/>
+   
+        </FrameLayout>       
+            
+        
+        <TextView
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="25"
+        android:text="Edit"
+        android:textColor="#000"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:id="@+id/PrimaryTextEdit"/>
+        
+
+    </LinearLayout>
+
+            <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"/>
+
+</LinearLayout>
+
+

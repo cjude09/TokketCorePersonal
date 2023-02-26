@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/txtTokHandle"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textColor="@color/BLACK"
+        android:textStyle="bold"
+        android:text="TOK HANDLE"
+        android:layout_margin="5dp"
+        android:padding="20dp"
+        android:layout_marginTop="10dp" 
+        android:background="@android:drawable/editbox_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtPreview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:textColor="@color/DIM_GREY"
+        android:text="Tok Tile Preview:"
+        android:layout_margin="10dp"
+        android:layout_marginTop="10dp" 
+        app:layout_constraintStart_toStartOf="parent"  
+        app:layout_constraintTop_toBottomOf="@id/txtTokHandle"/>
+
+    <!--Tile Preview-->
+    <View
+        android:id="@+id/viewTile"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_margin="5dp"
+        android:background="@color/colorAccent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtPreview"/>
+
+    <ImageView
+        android:id="@+id/imageTokketLogo"
+        android:layout_width="51dp"
+        android:layout_height="51dp"
+        android:layout_margin="2dp"
+        android:src="@drawable/birdlogo_whitestroke"
+        android:background="@color/primary_dark"
+        app:layout_constraintStart_toStartOf="@id/viewTile"
+        app:layout_constraintTop_toTopOf="@id/viewTile"/>
+
+    <ImageView
+        android:id="@+id/imageFlag"
+        android:layout_width="51dp"
+        android:layout_height="51dp"
+        android:layout_margin="2dp"
+        android:src="@drawable/birdlogo_whitestroke"
+        android:tint="@color/BLACK"
+        android:scaleX="-1"
+        android:background="@color/YellowBright"
+        app:layout_constraintEnd_toEndOf="@id/viewTile"
+        app:layout_constraintTop_toTopOf="@id/viewTile"/>
+
+    <ImageView
+        android:id="@+id/imagePreviewGraphic"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toEndOf="@id/imageTokketLogo"
+        app:layout_constraintEnd_toStartOf="@id/imageFlag"
+        app:layout_constraintTop_toTopOf="@id/viewTile"
+        app:layout_constraintBottom_toBottomOf="@id/imageTokketLogo"/>
+
+    <TextView
+        android:id="@+id/lbl_nameuser"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:text="SAMPLE USER NAME"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="@id/imagePreviewGraphic"
+        app:layout_constraintTop_toTopOf="@id/imagePreviewGraphic"
+        app:layout_constraintEnd_toEndOf="@id/imagePreviewGraphic"
+        app:layout_constraintBottom_toBottomOf="@id/imagePreviewGraphic"/>
+
+    <TextView
+        android:id="@+id/lblClassName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Class Name"
+        android:textSize="14sp"
+        android:gravity="center"  
+        android:layout_marginStart="5dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="@id/viewTile"
+        app:layout_constraintBottom_toTopOf="@id/lblRow2"/>
+
+    <TextView
+        android:id="@+id/lblRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Row2"
+        android:textSize="14sp"
+        android:gravity="center"  
+        android:layout_marginStart="5dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintStart_toStartOf="@id/viewTile"
+        app:layout_constraintBottom_toBottomOf="@id/viewTile"/>
+
+    <TextView
+        android:id="@+id/lblCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Category"
+        android:textSize="14sp"
+        android:gravity="center"  
+        android:layout_marginEnd="5dp"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="@id/viewTile"
+        app:layout_constraintTop_toTopOf="@id/lblClassName"
+        app:layout_constraintBottom_toBottomOf="@id/viewTile"/>
+    <!--END OF TILE PREVIEW-->
+
+    <Button        
+        android:id="@+id/btnChangeColor"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Change Color"
+        android:textColor="@color/WHITE"
+        android:textAllCaps="false"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewTile"/>
+
+    <Button        
+        android:id="@+id/btnChangeGraphic"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Change Graphic"
+        android:textColor="@color/WHITE"
+        android:textAllCaps="false"
+        android:padding="10dp"
+        android:layout_marginTop="1dp"
+        android:backgroundTint="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnChangeColor"/>
+
+    <Button        
+        android:id="@+id/btnChangePosition"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Change Position"
+        android:textColor="@color/WHITE"
+        android:textAllCaps="false"
+        android:padding="10dp"
+        android:layout_marginTop="1dp"
+        android:backgroundTint="@color/colorPrimary"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnChangeGraphic"/>
+
+    <Button        
+        android:id="@+id/btnSaveChanges"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Save Changes"
+        android:textColor="@color/WHITE"
+        android:textAllCaps="false"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/colorAccent_darker"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnChangePosition"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

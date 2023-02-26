@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearParent"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"  
+    android:padding="@dimen/padding_10">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/tokstargirl1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Thank you"
+        android:textStyle="bold"
+        android:textColor="@color/BLACK"
+        android:textSize="16sp"
+        android:layout_gravity="center"/>
+    <TextView
+        android:id="@+id/txtTypeTok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:textColor="@color/BLACK"
+        android:textSize="16sp"
+        android:layout_gravity="center"/>
+    <ImageView
+        android:id="@+id/imgCoin"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/gold"
+        android:layout_gravity="center"/>
+
+     <TextView
+        android:id="@+id/txtEarnedCoins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="You earned 2 coins!"
+        android:textColor="@color/BLACK"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"/>
+      
+     <Button
+        android:id="@+id/btnContinue"
+        style="@style/buttonMain"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/padding_10"
+        android:text="Continue"
+        android:padding="@dimen/padding_10"/>
+</LinearLayout>

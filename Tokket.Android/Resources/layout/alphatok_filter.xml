@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+     <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/alphatoksfilter_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/abc_action_bar_default_height_material"
+                >  
+            </androidx.appcompat.widget.Toolbar>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:layout_marginTop="20sp"
+     >
+        <EditText
+            android:id="@+id/txt_category"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:hint="Category"
+            android:background="@drawable/rounded_edittext_white_bg"
+            android:inputType="text" />
+        <Button
+            android:id="@+id/btn_catClear"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/closered_24px"
+            android:visibility="gone"/>
+    </LinearLayout>
+     <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+       >
+        <Spinner
+            android:id="@+id/spn_content"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:background="@android:drawable/spinner_dropdown_background"
+            android:inputType="text" />
+        <Button
+            android:id="@+id/btn_conClear"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/closered_24px"
+            android:visibility="gone"/>
+    </LinearLayout>
+     <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+       >
+         <Spinner
+            android:id="@+id/spn_country"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:background="@android:drawable/spinner_dropdown_background"
+          />
+        <Button
+            android:id="@+id/btn_countryClear"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/closered_24px"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+     <LinearLayout
+        android:id="@+id/linear_state"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+          android:layout_marginTop="20sp"
+       >
+         <Spinner
+            android:id="@+id/spn_state"
+            android:layout_width="match_parent"
+            android:layout_height="60sp"
+            android:background="@android:drawable/spinner_dropdown_background"
+          />
+        <Button
+            android:id="@+id/btn_stateClear"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/closered_24px"
+            android:visibility="gone"/>
+    </LinearLayout>
+    <Button
+        android:text="APPLY FILTER"
+        android:id="@+id/btn_applyFilter"
+          android:layout_marginTop="50sp"
+        android:background="@android:color/holo_green_light"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"/>
+
+        
+</LinearLayout>

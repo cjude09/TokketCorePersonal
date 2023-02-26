@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:src="@drawable/tokquestlogo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/imageView1" 
+        android:layout_marginTop="100dp"/>               
+
+     <Button
+        android:id="@+id/btnJoinGame"
+        android:textColor="#ffff"
+        android:background="#92D050"
+        android:text="Join Game"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/> 
+    
+    <Button
+        android:id="@+id/btnHostGame"
+        android:textColor="#ffff"
+        android:background="#0070C0"
+        android:text="Host Game"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textSize="20dp"/>
+
+    <Button
+        android:id="@+id/btnCreateGame"
+        android:textColor="#ffff"
+        android:background="#dc3545"
+        android:text="Create Game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textSize="20dp"/>
+
+    <Button
+        android:id="@+id/btnViewSets"
+        android:textColor="#ffff"
+        android:background="#ffc107"
+        android:text="View Sets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:textSize="20dp"/>
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:textColor="@android:color/white"
+        android:background="#FF0000"
+        android:text="@android:string/cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+          
+</LinearLayout>

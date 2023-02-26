@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<!--///showAsAction="always" ///-->
+	<item
+		android:id="@+id/itemPublic"
+		android:title="Public"
+		showAsAction="always"  />
+	<item
+		  android:id="@+id/btnMyClassTok"
+		  android:title="My Class Tok"
+		  showAsAction="always"/>
+</menu>

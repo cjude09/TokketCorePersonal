@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp">
+    <Button
+        android:id="@+id/btnCrop"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:text="Crop"
+        android:gravity="center" 
+        android:layout_gravity="end"
+        android:background="@drawable/rounded_stroke_blue"
+        android:padding="10dp"
+        android:layout_margin="5dp"
+        android:textColor="@color/BLACK"/>
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerInside"/>
+</LinearLayout>

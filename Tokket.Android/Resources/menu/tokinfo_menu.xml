@@ -1,0 +1,70 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools">
+	<item
+	  android:id="@+id/tokinfo_actions"
+	  android:title="Actions"
+	  app:showAsAction="ifRoom">
+		<menu>
+			<group android:id="@+id/group1">
+				<item
+				 android:id="@+id/tokinfo_addtoktoset"
+				 android:title="Add Tok to Set"/>
+				<item
+					android:id="@+id/tokinfo_share"
+					android:title="Share"/>
+			</group>
+			<group android:id="@+id/group2" >
+				<item
+				 android:id="@+id/tokinfo_addtilesticker"
+				 android:title="+ Add Tile Sticker"/>
+			</group>
+			<group android:id="@+id/group3" >
+				<item
+				 android:id="@+id/tokinfomenu_addsection"
+				 android:title="Add Section"/>
+				<item
+				  android:id="@+id/tokinfo_replicate"
+				  android:title="Replicate/Copy"/>
+				<item
+				  android:id="@+id/tokinfo_edit"
+				  android:title="Edit"/>
+				<item
+				  android:id="@+id/tokinfo_delete"
+				  android:title="Delete"/>
+			</group>
+			<group android:id="@+id/group4" >
+				<item
+				 android:id="@+id/tokinfo_removefromgroup"
+				 android:title="Remove from Group"/>
+			</group>
+			<group android:id="@+id/group5" >
+				<item
+					android:id="@+id/tokinfo_sharetoPublic"
+					  android:title="Share to Public"
+			  />
+				<item
+	  android:id="@+id/tokinfo_sharetoPrivate"
+	  android:title="Share to Private"/>
+				<item
+					android:id="@+id/publicToGroup"
+					android:title="Share to Group"/>
+				<item 
+				android:id="@+id/groupToGroup"
+				android:title="Share to another Group"/>
+				<item
+				 android:id="@+id/tokinfo_report"
+				 android:title="Report"/>
+			</group>
+			<group android:id="@+id/group6" >
+				<item
+				 android:id="@+id/tokinfo_shareFB"
+				 android:title="Share to Facebook"/>
+				<item
+					 android:id="@+id/tokinfo_shareTwitter"
+					 android:title="Share to Twitter"/>
+			</group>
+
+		</menu>
+	</item>
+</menu>

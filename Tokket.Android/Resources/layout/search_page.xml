@@ -1,0 +1,154 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/AppBarSearch"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:fitsSystemWindows="true">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/CollapsingToolBarMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_scrollFlags="scroll|enterAlways"
+            android:fitsSystemWindows="true"
+            app:expandedTitleMarginStart="48dp"
+            app:expandedTitleMarginEnd="64dp">
+            <com.google.android.flexbox.FlexboxLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                app:flexWrap="nowrap"
+                android:layout_gravity="center_vertical"
+                app:alignItems="center"
+                app:alignContent="center"
+                app:justifyContent="center"
+                app:layout_flexBasisPercent="100%">
+                <EditText
+                    app:layout_flexBasisPercent="80%"
+                    android:id="@+id/SearchText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:hint="Search"
+                    android:padding="15dp"
+                    android:gravity="left"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:textColorHint= "@android:color/white"
+                    android:textColor = "@android:color/white"
+                    android:background="@layout/rounded_border_edittext"/>
+                <Button
+                    app:layout_flexBasisPercent="20%"
+                    android:id="@+id/SearchButton"
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginRight="15dp"
+                    android:padding="17dp"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="Search"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/mybutton" />
+            </com.google.android.flexbox.FlexboxLayout>
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/placeholder_bg"/>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="54dp"
+                android:background="?attr/bgColor"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:tabGravity="fill"
+                app:tabMode="fixed"
+                app:tabSelectedTextColor="@color/colorAccent"
+                app:tabTextColor="?attr/textColor"
+                app:tabTextAppearance="@style/MyCustomTabText13">
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tabToks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Toks" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tabUsers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Users" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/tabCategories"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Categories" />
+            </com.google.android.material.tabs.TabLayout>
+
+            <Tokket.Android.LockableViewPager
+                android:id="@+id/viewpagerSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+
+    <!--TIPS-->
+	<FrameLayout
+		android:id="@+id/frameTip"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="#80000000"
+        android:visibility="gone"
+        android:onClick="OnTapSearchTip">
+		<LinearLayout
+			android:layout_width="300dp"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+            android:layout_gravity="center"
+			android:padding="30dp">
+			<TextView
+				android:text="Tip"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:textSize="25sp"
+				android:textStyle="bold"
+				android:textColor="@android:color/white"/>
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="Tap the FILTER button to switch between Public and My Class Toks"
+				android:textColor="@android:color/white"
+				android:background="@drawable/addtok_tip1"
+				android:backgroundTint="#6ab7f8"
+				android:padding="20dp"
+                android:gravity="center"
+				android:textSize="18sp"/> 
+			<TextView
+				android:layout_width="wrap_content"
+				android:layout_height="40dp"
+				android:text="Tap to continue..."
+				android:textSize="20sp"
+				android:gravity="center"
+				android:layout_gravity="center"
+				android:textStyle="bold"
+				android:textColor="@android:color/white"/>
+		</LinearLayout>
+	</FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

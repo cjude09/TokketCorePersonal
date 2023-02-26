@@ -1,0 +1,75 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp">
+    <ViewFlipper
+        android:id="@+id/viewFlipper_settokcard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+        <!--TokBack Front-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:background="@drawable/linear_border">
+            <TextView
+                android:id="@+id/lblTokSetBackCardFront"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="Tap to show"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:scrollbars="vertical"
+                android:textColor="@android:color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tap to flip"
+                android:layout_gravity="bottom"
+                android:gravity="right"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+        <!--TokBack Back-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/primary_light"
+            android:background="@drawable/linear_border">
+            <TextView
+                android:id="@+id/lblTokSetBackCardBack"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:scrollbars="vertical"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="Tap to flip"
+                android:gravity="right"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>-->
+    </ViewFlipper>
+</LinearLayout>

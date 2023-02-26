@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/rounded_white_background">
+
+    <TextView
+        android:id="@+id/txtHeaderText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_top_colormain"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Positioning"
+        android:textColor="@color/WHITE"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageBtnClose"
+        android:layout_width="55dp"
+        android:layout_height="0dp"
+        android:src="@android:drawable/ic_menu_close_clear_cancel" 
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        style="?android:attr/borderlessButtonStyle"
+        app:layout_constraintEnd_toEndOf="@id/txtHeaderText"
+        app:layout_constraintTop_toTopOf="@id/txtHeaderText"
+        app:layout_constraintBottom_toBottomOf="@id/txtHeaderText"/>
+
+    <CheckBox
+        android:id="@+id/chkOptionA"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Option A: Display Name on First Row, Tok Handle on 2nd row"
+        android:buttonTint="@color/colorPrimary"
+        android:padding="5dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtHeaderText"/>
+
+    <CheckBox
+        android:id="@+id/chkOptionB"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Option B: Tok Handle only on 1st row"
+        android:buttonTint="@color/colorPrimary"
+        android:padding="5dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chkOptionA"/>
+
+    <CheckBox
+        android:id="@+id/chkOptionC"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Option C: Tok Handle only on 2nd row"
+        android:buttonTint="@color/colorPrimary"
+        android:padding="5dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chkOptionB"/>
+
+    <CheckBox
+        android:id="@+id/chkOptionD"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Option D: Tok Handle twice the height on both rows"
+        android:buttonTint="@color/colorPrimary"
+        android:padding="5dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chkOptionC"/>
+
+    <TextView
+        android:id="@+id/txtDisplayOptionA"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="My Display Name \n THIS IS MY TOK HANDLE"
+        android:textSize="13sp"
+        android:textColor="@color/BLACK"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@color/YellowBright"
+        app:layout_constraintStart_toEndOf="@id/chkOptionA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/chkOptionA"
+        app:layout_constraintBottom_toBottomOf="@id/chkOptionA"/>
+
+    <TextView
+        android:id="@+id/txtDisplayOptionB"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="THIS IS MY TOK HANDLE"
+        android:textSize="13sp"
+        android:textColor="@color/BLACK"
+        android:gravity="center|top"
+        android:padding="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="@color/YellowBright"
+        app:layout_constraintStart_toEndOf="@id/chkOptionB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/chkOptionB"
+        app:layout_constraintBottom_toBottomOf="@id/chkOptionB"/>
+
+    <TextView
+        android:id="@+id/txtDisplayOptionC"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="THIS IS MY TOK HANDLE"
+        android:textSize="13sp"
+        android:textColor="@color/BLACK"
+        android:gravity="center|bottom"
+        android:padding="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/YellowBright"
+        app:layout_constraintStart_toEndOf="@id/chkOptionC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/chkOptionC"
+        app:layout_constraintBottom_toBottomOf="@id/chkOptionC"/>
+
+    <TextView
+        android:id="@+id/txtDisplayOptionD"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="THIS IS MY TOK HANDLE"
+        android:textSize="13sp"
+        android:textColor="@color/BLACK"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/YellowBright"
+        app:layout_constraintStart_toEndOf="@id/chkOptionD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/chkOptionD"
+        app:layout_constraintBottom_toBottomOf="@id/chkOptionD"/>
+
+    <Button        
+        android:id="@+id/btnSaveChanges"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="Save Changes"
+        android:textColor="@color/WHITE"
+        android:textAllCaps="false"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/colorAccent_darker"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chkOptionD"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,134 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp" 
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:background="#b085ed">
+
+        <ImageView                      
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:id="@+id/lblGroupSelect"
+                android:onClick="onClickGroupSelect"
+                android:src="@drawable/avatar5_2048x2048"
+                android:clickable="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"   
+                android:scaleType="fitXY"/>
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"   
+             android:orientation="vertical"   
+             android:layout_marginRight="30dp"    
+             android:layout_row="4"
+             android:layout_column="0">
+
+             <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"  
+                android:gravity="center_horizontal"
+                android:text="Quote of the Hour"
+                android:textStyle="bold"       
+                android:clickable="true"
+                android:focusable="true"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"/>
+
+             <ScrollView 
+                android:layout_width="match_parent"    
+                android:layout_height="100dp">     
+                <TextView            
+                    android:id="@+id/lblQuote"      
+                    android:layout_width="match_parent"         
+                    android:layout_height="wrap_content"              
+                    android:text="Diseases can rarely be eliminated through early diagnosis or good treatment, but prevention can eliminate disease."    
+                    android:textColor="@android:color/white"             
+                    android:textSize="15sp"                        
+                    android:padding="5dp"                        
+                    android:textStyle="italic"                 
+                    android:gravity="center_horizontal"/>  
+             </ScrollView>
+                   
+                    
+             <TextView 
+                android:id="@+id/lblQuoteAuthor"      
+                android:layout_width="match_parent"       
+                android:layout_height="wrap_content"        
+                android:text="Denis Parsons Burkitt"       
+                android:textColor="@android:color/white"   
+                android:textSize="12sp"             
+                android:textStyle="normal"          
+                android:gravity="center_horizontal"/>
+
+              <TextView  
+                android:id="@+id/lblQuoteCategory"          
+                android:layout_width="match_parent"                   
+                android:layout_height="wrap_content"    
+                android:text="Category: Disease Prevention amazing"        
+                android:textColor="@android:color/white"             
+                android:textSize="12sp"                        
+                android:textStyle="normal"                     
+                android:gravity="center_horizontal"/>
+
+        </LinearLayout>
+        
+       
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="30dp"  
+        android:orientation="vertical"   
+        android:layout_row="3"
+        android:layout_column="0"
+        android:gravity="center">
+        <Button         
+            android:id="@+id/btnTokkepedia"      
+            android:layout_width="250dp"        
+            android:layout_height="wrap_content"          
+            android:layout_marginLeft="5dp"              
+            android:layout_marginRight="5dp"             
+            android:drawableLeft="@drawable/birdlogo_icon"    
+            android:background="@drawable/mybutton"       
+            android:paddingLeft="20dp"                
+            android:paddingRight="20dp"                
+            android:gravity="center"                   
+            android:text="Back to Tokkepedia"                     
+            android:textAllCaps="false"                  
+            android:textSize="15sp"                     
+            android:textColor="@android:color/white"     
+            android:layout_row="5"                       
+            android:layout_column="0"/> 
+        
+         <Button         
+            android:id="@+id/btnShare"      
+            android:layout_width="250dp"        
+            android:layout_height="50dp"          
+            android:layout_marginTop="10dp"           
+            android:layout_marginLeft="5dp"              
+            android:layout_marginRight="5dp"  
+            android:drawableLeft="@drawable/baseline_share_white_24dp"    
+            android:background="@drawable/facebook_button"       
+            android:paddingLeft="20dp"    
+            android:drawablePadding="20dp"
+            android:gravity="left|center"                   
+            android:text="Share"                     
+            android:textAllCaps="false"                  
+            android:textSize="15sp"                     
+            android:textColor="@android:color/white"     
+            android:layout_row="5"                       
+            android:layout_column="0"/>
+    </LinearLayout>
+
+</LinearLayout>

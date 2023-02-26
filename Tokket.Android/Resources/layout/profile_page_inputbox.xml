@@ -1,0 +1,56 @@
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eef0f2">
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/InputLayoutInputBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:hintEnabled="false"
+        app:counterEnabled="false">
+        <EditText
+		    android:id="@+id/txtProfileInputBox"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+            android:minHeight="200dp"
+		    android:textStyle="normal"
+            android:layout_margin="10dp"
+		    android:textSize="18sp"
+		    android:padding="10dp"
+		    android:gravity="top"
+		    android:textColor = "@android:color/black"
+		    android:background="@drawable/rounded_edittext_white_bg"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="@color/colorAccent"
+        android:background="@drawable/linearboard_nopadding">
+        <Button
+            android:id="@+id/btnProfileInputBoxSave"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:text="Save"
+            android:textSize="18sp"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:background="@android:color/transparent"/>
+        <ProgressBar
+            android:id="@+id/circleprogressInputBox"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_height="match_parent"
+            android:layout_width="66dp"
+            android:layout_gravity="right"
+            android:indeterminate="true"
+            android:visibility="gone"/>
+    </FrameLayout>
+</LinearLayout>

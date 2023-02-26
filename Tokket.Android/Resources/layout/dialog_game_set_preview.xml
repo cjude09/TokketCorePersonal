@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+	android:padding="@dimen/padding_10"
+	android:background="@color/WHITE">
+
+	<TextView
+		android:id="@+id/txtPreviewLabel"
+		android:layout_width="0dp"	
+		android:layout_height="wrap_content"
+		android:background="@color/colorAccent"
+		android:gravity="center"
+		android:textSize="16sp"	 
+		android:padding="@dimen/padding_10"
+		android:text="PREVIEW MODE"	
+		android:textColor="@color/WHITE"	
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+		android:id="@+id/txtQuestionlabel"
+		android:layout_width="wrap_content"	
+		android:layout_height="wrap_content"
+		android:background="@color/WHITE"
+		android:gravity="center"
+		android:textSize="18sp"	 
+		android:text="Question: "	
+		android:textColor="@color/DIM_GREY"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/txtPreviewLabel"/>
+
+    <TextView
+		android:id="@+id/txtQuestion"
+		android:layout_width="0dp"	
+		android:layout_height="wrap_content"
+		android:background="@color/WHITE"
+		android:gravity="start"
+		android:textSize="18sp"	 
+		android:layout_marginStart="10dp"
+		tools:text="Question sample"	
+		android:textColor="@android:color/black"
+		app:layout_constraintStart_toEndOf="@id/txtQuestionlabel"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/txtPreviewLabel"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerAnswer"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+		android:layout_marginTop="@dimen/padding_10"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+		app:layout_constraintTop_toBottomOf="@id/txtQuestion"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"/>
+
+	<Button
+		android:id="@+id/btnContinue"			
+		android:layout_width="150dp"	
+		android:layout_height="wrap_content"
+		android:text="Continue"
+		android:background="@drawable/rounded_button_blue"
+		android:textAllCaps="false"	   
+		android:gravity="center" 
+		android:padding="@dimen/padding_10"
+		android:textSize="16sp"
+		android:textStyle="bold"
+		android:textColor="@android:color/white"
+		android:layout_marginTop="@dimen/padding_10"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/recyclerAnswer"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

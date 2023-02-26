@@ -1,0 +1,183 @@
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" 
+    android:orientation="vertical"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintParent"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        tools:background="@color/BLACK"
+        android:padding="2dp"
+        android:onClick="ItemRowClicked">
+        <TextView
+            android:id="@+id/TextClassGroupHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="Title" 
+            android:ellipsize="end"
+            android:textColor="@color/BLACK"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="5dp"
+            android:background="@color/WHITE"
+            app:layout_constraintHorizontal_bias="0.00"
+            app:layout_constraintStart_toStartOf="parent"         
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/txtMembers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Members 1"
+            android:textColor="@color/BLACK" 
+            android:textSize="14sp"
+            android:gravity="center"
+            android:padding="5dp"    
+            android:background="@color/WHITE"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/TextClassGroupHeader"/>
+
+        <TextView
+            android:id="@+id/txtGroupType"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            tools:text="Group Type"
+            android:textColor="@color/WHITE" 
+            android:textSize="14sp"
+            android:gravity="center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:padding="5dp"      
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtMembers"/>
+
+        <TextView
+            android:id="@+id/txtGroupDescription"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            tools:text="Group Description"
+            android:textColor="@color/WHITE" 
+            android:textSize="14sp"
+            android:gravity="center"
+            android:padding="5dp"    
+            android:maxLines="2"
+            android:ellipsize="end"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtGroupType"/>
+
+        <Button
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:id="@+id/btn_joinStatus"
+            android:text="Joined"   
+            android:background="@drawable/rounded_button_blue"
+            android:textColor="@color/WHITE"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtMembers"/>
+   
+        <TextView
+            android:id="@+id/lbl_SchoolName"
+            android:textColor="@color/WHITE"
+            tools:text="School name"
+            android:textSize="13sp"  
+            android:maxWidth="120dp"
+            android:gravity="end"
+            android:layout_marginEnd="10dp"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"               
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_joinStatus"/>
+
+        <ImageView
+            android:id="@+id/imgClassGroupListImg"
+            android:layout_width="0dp"
+            android:layout_height="90dp"
+            android:maxHeight="90dp"    
+            android:scaleType="fitCenter"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtGroupDescription"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/TextClassGroupBody"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            tools:text="Title"   
+            android:ellipsize="end"
+            android:textColor="@color/WHITE" 
+            android:textSize="16sp"
+            android:gravity="center"
+            android:padding="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtGroupDescription"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewUserPhoto"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            app:cardCornerRadius="24dp"
+            android:layout_centerHorizontal="true"
+            android:innerRadius="0dp"
+            android:shape="ring"
+            android:thicknessRatio="1.9"
+            android:layout_margin="5dp"
+            android:layout_gravity="center_horizontal"      
+            app:layout_constraintTop_toBottomOf="@id/txtMembers"
+            app:layout_constraintStart_toStartOf="parent">
+             <ImageView
+                 android:layout_width="51dp"
+                 android:layout_height="51dp"
+                 android:id="@+id/imageGroupImgUserPhoto"
+                 android:clickable="true"
+                 android:focusable="true"
+                 android:focusableInTouchMode="true"
+                 android:scaleType="fitXY"/>
+         </androidx.cardview.widget.CardView>
+        <TextView
+            android:id="@+id/lbl_groupOwnerName"
+            android:textColor="@color/WHITE"
+            android:text="Group Owner Name"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cardViewUserPhoto"/>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/chkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="@color/WHITE"                         
+            android:gravity="center"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toStartOf="parent" 
+            app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -1,0 +1,101 @@
+                                  
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <com.google.android.flexbox.FlexboxLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		app:flexWrap="nowrap"
+		app:alignItems="flex_start"
+		app:alignContent="flex_start"
+		app:justifyContent="flex_start"
+		app:layout_flexBasisPercent="100%">
+        
+	</com.google.android.flexbox.FlexboxLayout>
+
+    <TextView
+        android:id="@+id/TextNothingFoundGameset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:visibility="gone"
+        android:textColor="@color/secondary_text"
+        android:textSize="16sp"
+        android:gravity="center"/>
+
+    <!--<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshRecyclerGameset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    
+       
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+-->
+     <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerGamesetList"  
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingBottom="?android:attr/actionBarSize"
+            android:scrollbarStyle="outsideOverlay"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:divider="@android:color/transparent"/>
+    
+    <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         android:gravity="center"         
+         android:layout_marginTop="20dp"
+         app:layout_anchor="@+id/RecyclerGamesetList"
+         app:layout_anchorGravity="center|top">
+         
+            <ProgressBar
+            android:id="@+id/bottomProgressGameset1"
+            android:theme="@style/CircularProgressBlue"
+            style="@style/Widget.AppCompat.ProgressBar"  
+            android:layout_marginBottom="60dp"
+            android:layout_height="26dp"
+            android:layout_width="26dp"
+            android:visibility="invisible"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        app:layout_anchorGravity="center|top"
+        android:backgroundTint="#80000000"
+        android:background="@drawable/tileview_layout">
+        <TextView
+            android:id="@+id/progressBarinsideTextGameset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading..."
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:padding="5dp"/>
+        <ProgressBar
+            android:id="@+id/progressbargameset"
+            android:theme="@style/CircularProgressBlue"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_height="86dp"
+            android:layout_width="86dp"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:padding="5dp"/>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

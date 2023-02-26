@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+	<!--///showAsAction="always" ///-->
+	<item
+		android:id="@+id/share_option"
+		android:title="Share"
+		showAsAction="always"  />
+	<item
+		  android:id="@+id/report_option"
+		  android:title="Report"
+		  showAsAction="always"/>
+	<item
+		  android:id="@+id/edit_option"
+		  android:title="Edit"
+		  showAsAction="always"/>
+	<item
+		  android:id="@+id/delete_option"
+		  android:title="Delete"
+		  showAsAction="always"/>
+
+</menu>

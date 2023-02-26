@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="start"
+    android:layoutDirection="ltr"
+    android:padding="@dimen/padding_10">
+    <ImageView
+        android:id="@+id/imageIcon"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginEnd="20dp"
+        android:scaleType="fitXY"/>
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Tok Channels"
+        android:textSize="15sp"/>
+    <ImageView
+        android:id="@+id/iv_navigation"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="right"
+        android:scaleType="fitXY"
+        android:tint="@android:color/black"/>
+</LinearLayout>

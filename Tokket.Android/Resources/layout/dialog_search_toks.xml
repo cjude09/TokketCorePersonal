@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="350dp"
+    android:layout_height="match_parent"
+    android:background="@color/WHITE"
+    android:padding="@dimen/padding_10">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search Toks"
+        android:textSize="18sp"
+        android:textColor="@android:color/black"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/placeholder_bg"
+        android:layout_marginTop="@dimen/padding_10"
+        android:layout_marginBottom="@dimen/padding_10"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_marginBottom="@dimen/padding_10">
+        <EditText
+            android:id="@+id/txtSearchToks"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="16sp"
+            android:layout_weight="2"
+            android:textColor="@android:color/black"
+            android:background="@drawable/rounded_edittext_white_bg"/>
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:text="Search"
+            android:textColor="@color/WHITE"
+            android:textSize="16sp"
+            android:backgroundTint="@android:color/holo_blue_dark"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@android:color/white">
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swiperefresh_ListToks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"  
+                android:layout_width="match_parent"  
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingBottom="?android:attr/actionBarSize"
+                android:scrollbarStyle="outsideOverlay"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:divider="@android:color/transparent"/>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    
+        <io.supercharge.shimmerlayout.ShimmerLayout
+            android:id="@+id/shimmer_view_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <!-- Adding 5 rows of placeholders -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_gravity="center_vertical"
+                android:gravity="center">
+                <include layout="@layout/toks_placeholder_item" />
+                <include layout="@layout/toks_placeholder_item" />
+                <include layout="@layout/toks_placeholder_item" />
+                <include layout="@layout/toks_placeholder_item" />
+                <include layout="@layout/toks_placeholder_item" />
+                </LinearLayout>
+        </io.supercharge.shimmerlayout.ShimmerLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/swiperefresh_ListToks"
+        app:layout_constraintEnd_toEndOf="parent">
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:theme="@style/CircularProgressBlue"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:layout_height="26dp"
+            android:layout_width="26dp"
+            android:layout_gravity="center"
+            android:indeterminate="true"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+        <Button
+            android:id="@+id/btnAddTokLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Tok Link"
+            android:textColor="@color/WHITE"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/colorAccent"/>
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@android:string/cancel"
+            android:textColor="@color/WHITE"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:backgroundTint="@android:color/holo_red_dark"/>
+    </LinearLayout>
+</LinearLayout>

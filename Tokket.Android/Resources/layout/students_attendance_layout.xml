@@ -1,0 +1,563 @@
+                                                   
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+    <com.google.android.flexbox.FlexboxLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		app:flexWrap="nowrap"
+		app:alignItems="flex_start"
+		app:alignContent="flex_start"
+		app:justifyContent="flex_start"
+		app:layout_flexBasisPercent="100%">
+        
+	</com.google.android.flexbox.FlexboxLayout>
+
+    <TextView
+        android:id="@+id/TextNothingFoundAttend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:visibility="visible"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:text="Please wait for the leader to start the game"
+        android:background="#3498DB"
+        android:padding="10dp"/>
+<!--
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshRecyclerAttend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/actionBarSize"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+        
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+-->
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerAttendList"  
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingBottom="?android:attr/actionBarSize"
+            android:scrollbarStyle="outsideOverlay"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:divider="@android:color/transparent"
+            android:layout_marginTop="?attr/actionBarSize"
+            />
+
+    <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         android:gravity="center"         
+         android:layout_marginTop="20dp"
+         app:layout_anchor="@+id/RecyclerAttendList"
+         app:layout_anchorGravity="center|top">
+         
+            <ProgressBar
+            android:id="@+id/bottomProgressAttend"
+            android:theme="@style/CircularProgressBlue"
+            style="@style/Widget.AppCompat.ProgressBar"  
+            android:layout_marginBottom="60dp"
+            android:layout_height="26dp"
+            android:layout_width="26dp"
+            android:visibility="invisible"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearProgressAttend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        app:layout_anchorGravity="center|top"
+        android:backgroundTint="#80000000"
+        android:background="@drawable/tileview_layout">
+        <TextView
+            android:id="@+id/progressBarinsideTextAttend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Loading..."
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:padding="5dp"/>
+        <ProgressBar
+            android:id="@+id/progressbarAttend"
+            android:theme="@style/CircularProgressBlue"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_height="86dp"
+            android:layout_width="86dp"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:padding="5dp"/>
+    </LinearLayout>
+
+   <LinearLayout
+        android:id="@+id/GamePlayDiv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:backgroundTint="#31538f"
+        android:background="#31538f"
+        android:visibility="gone"
+        >
+
+       <LinearLayout
+        android:id="@+id/topholder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:backgroundTint="#31538f"
+        android:background="#31538f"
+        android:weightSum="100">
+ 
+            <Button
+           android:layout_weight="25"        
+            android:id="@+id/invicible1"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:background="@color/alli_red"
+            android:text="X"
+            android:textColor="@color/abc_decor_view_status_guard_light"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_gravity="top|right"
+            android:visibility="invisible"/>
+
+         <ImageView
+            android:layout_weight="50"    
+            android:id="@+id/TokquestGamePlayLogo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/tokquestlogo"
+            android:contentDescription="logo" 
+            android:layout_marginTop="5dp"
+            android:layout_gravity="top"
+            />
+
+            
+        <Button
+           android:layout_weight="25"        
+            android:id="@+id/TokquestGamePlayExit"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:background="@color/alli_red"
+            android:text="X"
+            android:textColor="@color/abc_decor_view_status_guard_light"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_gravity="top|right"
+            android:layout_marginEnd="5dp"/>
+
+       </LinearLayout> 
+
+        <TextView
+            android:id="@+id/gameplayTextQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="130dp"
+            android:text="What is the capital of the Philippines?"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:padding="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="20dp"
+            android:background="@drawable/rounded_border_tokquest"
+            />
+
+        
+          <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerAttendListChoices"  
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:scrollbarStyle="outsideOverlay"
+            android:divider="@android:color/transparent"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"/>
+        
+    <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         android:gravity="center"         
+         android:layout_marginTop="2dp"
+         app:layout_anchor="@+id/RecyclerAttendListChoices"
+         app:layout_anchorGravity="center|top">
+         
+    </LinearLayout>
+
+
+
+       <LinearLayout
+        android:id="@+id/bottomholder"
+       android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:background="#31538f"
+        android:weightSum="100"
+        android:gravity="bottom"
+        android:layout_gravity="bottom">
+
+          <Button
+            android:layout_weight="40"    
+            android:id="@+id/TimerTokquestInvisible"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center|bottom"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_button_orange"
+            android:text="10"
+            android:textColor="@color/abc_decor_view_status_guard_light"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_gravity="bottom"
+            android:layout_marginEnd="5dp"
+            android:visibility="invisible"/>
+
+
+        
+          <Button
+            android:layout_weight="10"    
+            android:id="@+id/TimerTokquest"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_button_orange"
+            android:text="10"
+            android:textColor="@color/abc_decor_view_status_guard_light"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_gravity="bottom"
+            android:layout_marginEnd="5dp"
+            android:backgroundTint="@color/alli_red"/>
+
+        <Button
+            android:layout_weight="40"  
+            android:id="@+id/PlayersAndScores"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:background="@color/forestgreen"
+            android:text="Players and Scores"
+            android:textColor="@color/abc_decor_view_status_guard_light"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_gravity="bottom|right"
+            android:layout_marginEnd="5dp"
+            />
+
+    </LinearLayout>
+  
+
+   </LinearLayout>
+
+       <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/linearProgressGameOver"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        app:layout_anchorGravity="center|top"
+        android:backgroundTint="#ffffff"
+        android:background="@drawable/tileview_layout">
+        <TextView
+            android:id="@+id/progressBarinsideTextGameOver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Game Over! Please wait..."
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:layout_gravity="center_vertical"
+            />
+        <ProgressBar
+            android:id="@+id/progressbarAttendGameOver"
+            android:theme="@style/CircularProgressBlue"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_height="86dp"
+            android:layout_width="86dp"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:padding="5dp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/linearGameAlert"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        app:layout_anchorGravity="center|top"
+        android:backgroundTint="#ffffff"
+        android:background="@drawable/tileview_layout"
+        >
+        
+          <ImageView
+            android:id="@+id/checkOrExImg"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/check_green"
+            android:contentDescription="logo" 
+            android:layout_marginTop="20dp"
+            android:layout_gravity="top|center"
+            />   
+        
+        <TextView
+            android:id="@+id/checkOrExText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Correct!"
+            android:textSize="18sp"
+            android:textStyle="bold "
+            android:textColor="#5D6D7E"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:layout_gravity="center_vertical"
+            />
+        
+        <TextView
+            android:id="@+id/checkOrExTextAnswer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Correct!"
+            android:textSize="14sp"
+            android:textStyle="bold "
+            android:textColor="#5D6D7E"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:layout_gravity="center_vertical"
+            />
+        
+          <Button
+            android:id="@+id/checkOrExContinue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_border_tokquest"
+            android:backgroundTint="#3498DB"
+            android:text="Continue"
+            android:textColor="@color/abc_decor_view_status_guard_light"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="10dp"
+            android:paddingHorizontal="8dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/linearGameAlertOver"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        app:layout_anchorGravity="center|top"
+        android:backgroundTint="#ffffff"
+        android:background="@drawable/tileview_layout"
+        android:padding="20dp">
+        
+          <ImageView
+            android:id="@+id/checkOrExImgOver"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/info"
+            android:contentDescription="logo" 
+            android:layout_marginTop="20dp"
+            android:layout_gravity="top|center"
+            />   
+        
+        <TextView
+            android:id="@+id/checkOrExTextOver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Game Over!"
+            android:textSize="20sp"
+            android:textStyle="bold "
+            android:textColor="#5D6D7E"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:layout_gravity="center_vertical"
+            />
+        
+        <TextView
+            android:id="@+id/checkOrExTextAnswerOver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="You finished in 2nd plae and scored 100 points!"
+            android:textSize="12sp"
+            android:textStyle="bold "
+            android:textColor="#5D6D7E"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textAlignment="center"
+            android:layout_gravity="center_vertical"
+            />
+        
+
+        <LinearLayout
+        android:weightSum="100"
+        android:id="@+id/dashBoard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:backgroundTint="#ffffff"
+        android:background="@drawable/tileview_layout"
+        android:layout_marginTop="5dp">
+        
+
+           <TextView
+            android:layout_weight="33"      
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Score"
+            android:textSize="12sp"
+            android:textStyle="bold "
+            android:textColor="#5D6D7E"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textAlignment="center"
+            />
+        
+            <TextView
+            android:layout_weight="34"      
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Correct Answers"
+            android:textSize="12sp"
+            android:textStyle="bold "
+            android:textColor="#5D6D7E"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textAlignment="center"
+            />
+        
+           <TextView
+            android:layout_weight="33"      
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Wrong Answers"
+            android:textSize="12sp"
+            android:textStyle="bold "
+            android:textColor="#5D6D7E"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textAlignment="center"
+            />
+        
+        </LinearLayout>
+
+        <LinearLayout
+        android:weightSum="100"
+        android:id="@+id/dashBoardContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:backgroundTint="#ffffff"
+        android:background="@drawable/tileview_layout"
+        android:layout_marginTop="5dp">
+        
+
+           <TextView
+            android:id="@+id/final_score"
+            android:layout_weight="33"      
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="10"
+            android:textSize="12sp"
+            android:textStyle="bold "
+            android:textColor="#5D6D7E"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textAlignment="center"
+            />
+        
+            <TextView
+            android:id="@+id/final_correct_answer"    
+            android:layout_weight="34"      
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:textSize="12sp"
+            android:textStyle="bold "
+            android:textColor="#5D6D7E"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textAlignment="center"
+            />
+        
+           <TextView
+            android:id="@+id/final_wrong_answer"    
+            android:layout_weight="33"      
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:textSize="12sp"
+            android:textStyle="bold "
+            android:textColor="#5D6D7E"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textAlignment="center"
+            />
+        
+        </LinearLayout>
+
+
+          <Button
+            android:id="@+id/checkOrExContinueOver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/rounded_border_tokquest"
+            android:backgroundTint="#3498DB"
+            android:text="Exit"
+            android:textColor="@color/abc_decor_view_status_guard_light"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:layout_gravity="bottom|center"
+            android:layout_marginBottom="10dp"
+            android:paddingHorizontal="8dp"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

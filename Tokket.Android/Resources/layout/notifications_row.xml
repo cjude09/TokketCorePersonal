@@ -1,0 +1,197 @@
+
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp">
+    <GridLayout
+        android:id="@+id/gridBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:rowCount="2"
+        android:numColumns="3">
+        <!--Row 1-->
+        <LinearLayout            
+            android:id="@+id/btnTok"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnSpan="3"
+            android:layout_gravity="center_horizontal|fill_horizontal"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal"
+            android:clickable="true">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_UserPhoto"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerCrop"           
+                android:layout_row="0"
+                android:layout_column="0"
+                app:civ_circle_background_color="@android:color/white"
+                app:civ_border_width="3dp"
+                app:civ_border_color="@android:color/white"/>
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:orientation="vertical"    
+                android:layout_marginLeft="10dp"
+                android:layout_row="0"
+                android:layout_column="1">
+
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="wrap_content"     
+                    android:layout_gravity="right"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/TextMarkAsRead"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"     
+                        android:layout_gravity="right"  
+                        android:text="Mark as read"
+                        android:textColor="@color/colorAccent"
+                        android:layout_marginRight="10dp"
+                        android:textSize="12sp"
+                        android:textStyle="bold"       
+                        android:clickable="true"/>
+                   
+                    <TextView
+                        android:id="@+id/TextDelete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"   
+                        android:layout_gravity="right"
+                        android:text="trash-alt"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:clickable="true"
+                        android:background="?android:attr/selectableItemBackgroundBorderless"
+                        android:textColor="@color/red_500"/>
+                    
+                </LinearLayout> 
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center_horizontal|fill_horizontal"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/TextUsername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"           
+                        android:text="Sample"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textSize="16sp"
+                        android:textStyle="bold"       
+                        android:clickable="true"/>
+                    <TextView      
+                        android:id="@+id/NotificationText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"          
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:text="Put gem on your "
+                        android:textSize="14sp"/>
+                    
+                </LinearLayout> 
+
+                <LinearLayout
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_gravity="center_horizontal|fill_horizontal"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal">
+
+                    
+                    <TextView      
+                        android:id="@+id/TextSelectedTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:text="Selected Title"
+                        android:textSize="12sp"/>
+
+                    <!-- <TextView
+                        android:id="@+id/TextAccountType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:text="Account Type"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textSize="12sp"
+                        android:clickable="true"/>
+
+
+                    <TextView      
+                        android:id="@+id/TextSelectedTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:text="Selected Title"
+                        android:textSize="12sp"/>
+
+
+                    <TextView      
+                        android:id="@+id/TextSubAccountName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center"
+                        android:text="Subaccount Name"
+                        android:textSize="12sp"/>      -->
+                </LinearLayout>
+
+                
+            </LinearLayout>
+
+          
+        </LinearLayout>
+
+        
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"      
+            android:layout_row="0"
+            android:layout_column="0"
+            android:gravity="center"
+            app:layout_anchorGravity="center|top"
+            android:layout_centerInParent="true" >
+            <TextView
+                 android:id="@+id/progressBarinsideText"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentLeft="true"
+                 android:layout_alignParentRight="true"
+                 android:layout_centerVertical="true"
+                 android:text="Logging in..."
+                 android:textSize="15sp"
+                 android:visibility="invisible"
+                 android:textColor="@android:color/black"
+                 android:gravity="center"/>
+            <ProgressBar
+                android:id="@+id/ProgressbarCircle"
+                android:theme="@style/CircularProgress"
+                style="@style/Widget.AppCompat.ProgressBar"
+                android:layout_height="56dp"
+                android:layout_width="56dp"
+                android:visibility="invisible"
+                android:layout_gravity="center"
+                android:indeterminate="true"/>
+        </LinearLayout>
+    </GridLayout>
+</LinearLayout>

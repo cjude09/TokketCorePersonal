@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+  <item
+    android:id="@+id/btnManage"
+    android:title="Manage"
+    app:showAsAction="ifRoom">
+    <menu>
+      <group android:id="@+id/group1" >
+        <item
+         android:id="@+id/item_TokPakPreview_Edit"
+         android:title="Edit"/>
+        <item
+            android:id="@+id/item_TokPakPreview_Delete"
+            android:title="Delete"/>
+	    <item
+            android:id="@+id/item_TokPakPreview_Report"
+            android:title="Report"/>
+      </group>
+    </menu>
+  </item>
+</menu>

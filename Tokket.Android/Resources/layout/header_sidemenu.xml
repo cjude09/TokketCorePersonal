@@ -1,0 +1,135 @@
+ <androidx.coordinatorlayout.widget.CoordinatorLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"    
+    android:id="@+id/relativeLayoutHeader"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"                    
+    android:background="@color/primary">      
+        
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="15dp"
+        android:paddingRight="5dp"
+        android:paddingTop="40dp">
+
+        <com.google.android.flexbox.FlexboxLayout 
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            app:justifyContent="space_between"
+            app:flexDirection="row"
+            app:flexWrap="wrap">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_profileUserPhoto"    
+                android:layout_width="70dp"                   
+                android:layout_height="70dp"                 
+                android:scaleType="centerCrop"               
+                android:contentDescription="0"                
+                android:clickable="true"                       
+                android:focusable="true"                        
+                android:onClick="onRedirectProfile"    
+                app:civ_circle_background_color="@android:color/white"   
+                app:civ_border_width="3dp"                                  
+                app:civ_border_color="@android:color/white"/> 
+
+            <LinearLayout            
+                android:id="@+id/LinearCoins"     
+                android:layout_width="70dp"           
+                android:layout_height="wrap_content"        
+                android:orientation="vertical"            
+                android:layout_gravity="top">     
+
+               <ImageView
+                    android:id="@+id/gif_profileCoins"
+                    android:layout_gravity="center"                      
+                    android:layout_width="50dp"                            
+                    android:layout_height="50dp"             
+                    android:contentDescription="coins"                    
+                    android:scaleType="fitCenter"/>     
+               <TextView                             
+                    android:id="@+id/TextProfileCoins"   
+                    android:layout_width="wrap_content"              
+                    android:layout_height="wrap_content"              
+                    android:text="Coins"                 
+                    android:contentDescription="coins"          
+                    android:layout_gravity="center"                
+                    android:textColor="@android:color/white"/>
+            </LinearLayout>
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"> 
+            <TextView
+                android:id="@+id/lblUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="XXX"
+                android:textStyle="bold"       
+                android:clickable="true"
+                android:focusable="true"
+                android:textColor="@android:color/white"
+                android:onClick="onRedirectProfile"
+                android:textSize="16sp"/>
+        </LinearLayout>
+
+       <com.google.android.flexbox.FlexboxLayout
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"   
+            app:flexDirection="row"
+            app:flexWrap="nowrap">           
+
+            <TextView
+                android:id="@+id/lblGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="XXX@gmail.com"
+                android:gravity="center_vertical"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                android:textStyle="italic"
+                app:layout_flexGrow="1"/> 
+                
+           <ImageView                      
+                android:layout_width="70dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblGroupSelect"
+                android:onClick="onClickGroupSelect"
+                android:src="@drawable/caret_down"
+                android:background="@drawable/ripple_circle"
+                android:clickable="true"
+                android:scaleType="fitXY"/>
+
+        </com.google.android.flexbox.FlexboxLayout>
+        <TextView
+            android:id="@+id/txtFeedOptionType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/WHITE"
+            android:textStyle="bold"
+            android:padding="@dimen/padding_10"/>
+    </LinearLayout> 
+
+    <LinearLayout    
+        android:id="@+id/LinearCoinsToast"             
+        android:layout_width="wrap_content"              
+        android:layout_height="wrap_content"               
+        android:visibility="gone"                         
+        android:backgroundTint="#80000000"               
+        android:background="@drawable/tileview_layout"     
+        app:layout_anchorGravity="top|center"              
+        app:layout_anchor="@+id/LinearCoins">       
+        <TextView                            
+            android:id="@+id/TextCoinsToast"             
+            android:layout_width="wrap_content"           
+            android:layout_height="wrap_content"           
+            android:textColor="@android:color/white"        
+            android:padding="10dp"                       
+            android:textSize="14sp"/>        
+    </LinearLayout> 
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

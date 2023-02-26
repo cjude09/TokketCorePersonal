@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ProgressBar
+		android:id="@+id/progressbar"
+		style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+		android:layout_height="30dp"
+		android:layout_width="match_parent"
+		android:layout_gravity="center"
+		android:indeterminate="true"
+        android:visibility="gone"
+		android:layout_centerInParent="true"/>
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/home_swiperefresh_ListToks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+               
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RecyclerContainer"  
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingBottom="?android:attr/actionBarSize"
+            android:scrollbarStyle="outsideOverlay"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:divider="@android:color/transparent"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

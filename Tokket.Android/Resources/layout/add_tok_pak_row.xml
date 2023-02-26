@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearTokPakRow"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/txtPrimaryNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:gravity=""
+            android:text="Page 1:"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <TextView
+            android:id="@+id/txtPagePrimary"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_edittext_white_bg"
+            android:gravity="start|center"
+            android:padding="@dimen/padding_10"
+            android:hint="Primary Text"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintStart_toEndOf="@id/txtPrimaryNumber"
+            app:layout_constraintEnd_toStartOf="@id/btnInsert"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+        <Button
+            android:id="@+id/btnInsert"
+            style="@style/buttonMain"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:text="Insert"
+            android:textSize="14sp"
+            android:textColor="@color/WHITE"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintEnd_toStartOf="@id/btnRemovePaste"
+            app:layout_constraintTop_toTopOf="@id/txtPagePrimary"
+            app:layout_constraintBottom_toBottomOf="@id/txtPagePrimary"/>
+        <Button
+            android:id="@+id/btnRemovePaste"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="X"
+            android:textSize="16sp"
+            android:textColor="@color/WHITE"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:textAllCaps="false"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtPagePrimary"
+            app:layout_constraintBottom_toBottomOf="@id/txtPagePrimary"/>
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/flexButtonToks"
+            android:layout_height="0dp"
+            android:layout_width="0dp"        
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:flexWrap="nowrap"
+            app:alignItems="flex_start"
+            app:alignContent="flex_start"
+            app:justifyContent="flex_start"
+            app:layout_flexBasisPercent="100%"
+            app:layout_constraintStart_toEndOf="@id/txtPrimaryNumber"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/txtPrimaryNumber"
+            app:layout_constraintBottom_toBottomOf="@id/txtPrimaryNumber">
+            <Button
+                android:id="@+id/btnPasteTok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paste Tok"
+                android:textSize="11sp"
+                android:textColor="@android:color/holo_blue_dark"
+                android:textAllCaps="false"/>
+            <Button
+                android:id="@+id/btnFindTok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Find Tok"
+                android:textSize="11sp"
+                android:textColor="@android:color/holo_green_dark"
+                android:textAllCaps="false"/>
+            <Button
+                android:id="@+id/btnAddClassTok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:text="Add Class Tok"
+                android:textSize="11sp"
+                android:visibility="visible"
+                tools:visibility="visible"/>
+        </com.google.android.flexbox.FlexboxLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerTok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:scrollbarStyle="outsideOverlay"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:divider="@android:color/transparent"/>
+
+
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/transparent">
+    <androidx.cardview.widget.CardView 
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+                    app:cardCornerRadius="40dp"
+                    android:layout_centerHorizontal="true"
+                    android:innerRadius="0dp"
+                    android:shape="ring"
+                    android:thicknessRatio="1.9"
+              android:layout_marginTop="21dp"
+                    >
+    <ImageView
+        android:id="@+id/tokstar_img"
+        android:scaleType="fitXY"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/circle_grey_stroke"
+        android:contentDescription="description" />
+        </androidx.cardview.widget.CardView>
+    <TextView
+        android:id="@+id/txt_dialogue"
+        android:layout_width="match_parent"
+        android:text="Sample Text"
+        android:textColor="@color/WHITE"
+        android:gravity="center_horizontal"
+        android:paddingTop="11dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="5dp"
+        android:layout_height="80dp"
+        android:background="@drawable/speech_bubble_blue"/>
+</LinearLayout>

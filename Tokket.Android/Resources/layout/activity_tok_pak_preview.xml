@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/browser_actions_bg_grey">
+    <com.google.android.flexbox.FlexboxLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        app:flexWrap="nowrap"
+        app:alignItems="center"
+        app:alignContent="center"
+        app:justifyContent="flex_start"
+        app:layout_flexBasisPercent="100%">
+        <Button
+		    android:id="@+id/btnPresentationMode"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Presentation Mode"
+		    android:textSize="15sp"
+		    android:textAllCaps="false"
+		    android:textColor="@color/WHITE"
+		    android:backgroundTint="#259c41"
+		    android:padding="@dimen/padding_10"
+            android:layout_marginStart="@dimen/padding_10"  
+            app:layout_flexBasisPercent="40%"/>
+    </com.google.android.flexbox.FlexboxLayout>
+    
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerPages"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:scrollbars="horizontal"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+</LinearLayout>

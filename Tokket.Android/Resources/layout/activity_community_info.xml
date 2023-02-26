@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="?attr/bgColor"
+    android:padding="10dp">
+    <TextView              
+        android:id="@+id/txtGroupHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="SAMPLE"
+        android:background="@drawable/rounded_blue_stroke_bg"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/DIM_GREY"/>
+
+    <Button
+        android:id="@+id/btnAddClassTok"
+        style="@style/buttonMain"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="+ Add Class Tok"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:textColor="@color/WHITE" 
+        android:textAllCaps="false"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintTop_toBottomOf="@id/txtGroupHeader"
+        app:layout_constraintEnd_toStartOf="@id/btnAddClassGroup"/>
+    <Button
+         android:id="@+id/btnAddClassGroup"
+         style="@style/buttonMain"
+         android:layout_width="150dp"
+         android:layout_height="wrap_content"
+         android:text="+ Add Class Group"
+         android:textSize="14sp"
+         android:gravity="center"
+         android:textColor="@color/WHITE" 
+         android:textAllCaps="false"
+         android:layout_marginTop="10dp"
+         app:layout_constraintTop_toBottomOf="@id/txtGroupHeader"
+         app:layout_constraintEnd_toEndOf="@id/txtGroupHeader"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+         android:id="@+id/recyclerToks"  
+         android:layout_width="match_parent"  
+         android:layout_height="0dp"
+         android:clipToPadding="false"
+         android:paddingBottom="?android:attr/actionBarSize"
+         android:scrollbarStyle="outsideOverlay"
+        android:layout_marginTop="10dp"
+         app:layout_behavior="@string/appbar_scrolling_view_behavior"
+         android:divider="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/btnAddClassGroup"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearBackground"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:background="@color/DIM_GREY">
+    <TextView
+        android:id="@id/txtHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/placeholder_bg"
+        android:textColor="@color/secondary_text"
+        android:textSize="16sp"
+        android:textStyle="bold"                  
+        android:padding="@dimen/padding_10"
+        android:gravity="center"
+        tools:text="Header"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/secondary_text"/>
+    <TextView
+        android:id="@id/txtItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp" 
+        android:padding="@dimen/padding_10"
+        android:textColor="@color/secondary_text"
+        android:background="@color/WHITE"
+        tools:text="Item Text"/>
+      <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         android:background="@color/WHITE"
+        android:visibility="gone"
+        />
+</LinearLayout>

@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar"
+    android:layout_width="@dimen/_250sdp"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/padding_10"
+    android:background="@color/WHITE">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Replicate Tok"
+        android:textColor="@color/BLACK"
+        android:textSize="16sp"/>
+    <View
+        android:id="@+id/viewHorizontalTop"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/GREY"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/txtTitle"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtSubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Copy and use this tok in a different category"
+        android:textColor="@color/DIM_GREY"
+        android:textSize="14sp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/viewHorizontalTop"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/txtCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Category:"
+        android:textColor="@color/DIM_GREY"
+        android:textSize="14sp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintTop_toBottomOf="@id/txtSubTitle"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:id="@+id/inputClassTokCategory"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:hint="Category (required field)"
+	    app:counterEnabled="true"
+	    app:counterMaxLength="50"
+	    android:layout_marginTop="@dimen/_5sdp"
+	    android:layout_marginBottom="5dp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/txtCategory">
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/txtClassTokCategory"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:textSize="16sp"
+            android:padding="10dp"
+            android:maxLength="50"
+            android:textColor="@android:color/black" 
+            android:textStyle="normal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+		android:id="@+id/txtPostCopyTo"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="Post a copy to:"
+		android:gravity="start"
+		android:padding="10dp"
+		android:textStyle="bold"
+		android:textSize="16sp"
+		android:textColor="?attr/textColor"
+		android:layout_marginTop="@dimen/_10sdp"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/inputClassTokCategory"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearPostCopy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/txtPostCopyTo">
+       <CheckBox
+            android:id="@+id/chkPrivate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="?attr/textColor"
+            android:text="Private"
+            android:checked="true"
+            android:buttonTint="@color/colorAccent"
+            android:layout_marginEnd="@dimen/_10sdp"/>
+
+        <CheckBox
+            android:id="@+id/chkPublic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="?attr/textColor"
+            android:text="Public"
+            android:buttonTint="@color/colorAccent"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <Button
+        android:id="@+id/btnCancel"
+       android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="Cancel"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@id/btn_share"
+        android:textColor="@color/WHITE"
+        android:background="@drawable/gray_button"
+        app:layout_constraintEnd_toStartOf="@id/btnReplicate"
+		app:layout_constraintTop_toTopOf="@id/btnReplicate"/>
+
+    <Button
+        android:id="@+id/btnReplicate"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:text="Replicate"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:textColor="@color/WHITE"
+        android:background="@drawable/blue_button"
+        app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/linearPostCopy"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

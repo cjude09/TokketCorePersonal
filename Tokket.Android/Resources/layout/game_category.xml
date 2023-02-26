@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    
+        <Button
+        android:text="Race Mode"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/btnRace" 
+        android:textColor="#FFFFFF"
+        android:padding="15dp"
+        android:textSize="20dp"
+        android:background="#0069d9"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:text="Leader Mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLeader" 
+        android:textColor="#FFFFFF"
+        android:padding="15dp"
+        android:textSize="20dp"
+        android:background="#218838"
+        android:layout_marginTop="10dp"/>
+    <Button
+        android:text="Gauntlet Mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnGauntlet" 
+        android:textColor="#FFFFFF"
+        android:padding="15dp"
+        android:textSize="20dp"
+        android:background="#008080"
+        android:layout_marginTop="10dp"
+        android:visibility="visible"/>
+
+
+
+</LinearLayout>
+
+

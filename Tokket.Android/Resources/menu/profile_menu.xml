@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <item
+      android:id="@+id/item_filter"
+      android:title="Filter"
+      showAsAction="always"/>
+	
+	<!--<item
+      android:id="@+id/item_titles"
+      android:title="Titles"
+      showAsAction="always"/> -->
+	
+  <item
+      android:id="@+id/item_avatar"
+      android:title="Avatar"
+      showAsAction="always"/>
+  <item
+      android:id="@+id/item_badges"
+      android:title="Badges"
+      showAsAction="always"/>
+  <item
+      android:id="@+id/item_sets"
+      android:title="Sets"
+      showAsAction="always"/>
+  <item
+        android:id="@+id/item_Report"
+        android:title="Report"
+        showAsAction="always"/>
+  <item
+        android:id="@+id/item_Share"
+        android:title="Share"
+        showAsAction="always"/>
+  <item
+	  android:id="@+id/item_Membership"
+	  android:title="Membership"
+	  showAsAction="always"/>
+	<item
+		android:id="@+id/item_tokHandle"
+android:title="Tok Handle"
+android:showAsAction="always"
+		/>
+</menu>

@@ -1,0 +1,113 @@
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/LinearGameplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="2dp"
+        android:background="#0080ff"
+        >
+        <TextView
+            android:layout_weight="16"
+            android:id="@+id/TextPlayerName"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:text="Player name"
+            android:ellipsize="end"
+            android:textColor="#000000"
+            android:background="#FFFFFF"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:gravity="left|center"
+            android:padding="1dp"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_weight="16"
+            android:id="@+id/TextPlayerPoints"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:text="Points"
+            android:ellipsize="end"
+            android:textColor="#000000"
+            android:background="#FFFFFF"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:gravity="left|center"
+            android:padding="1dp"
+            android:textAlignment="center"/>
+        
+
+         <TextView
+            android:layout_weight="16"
+            android:id="@+id/TextQAns"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:text="Round"
+            android:ellipsize="end"
+            android:textColor="#000000"
+            android:background="#FFFFFF"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:gravity="left|center"
+            android:padding="1dp"
+            android:textAlignment="center"/>
+           <TextView
+            android:layout_weight="16"
+            android:id="@+id/TextCorrect"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:text="Corect ans"
+            android:ellipsize="end"
+            android:textColor="#000000"
+            android:background="#FFFFFF"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:gravity="left|center"
+            android:padding="1dp"
+            android:textAlignment="center"/>
+        <TextView
+            android:layout_weight="16"
+            android:id="@+id/TextActive"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:text="is active"
+            android:ellipsize="end"
+            android:textColor="#000000"
+            android:background="#FFFFFF"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:gravity="left|center"
+            android:padding="1dp"
+            android:textAlignment="center"/>
+        <TextView
+            android:layout_weight="16"
+            android:id="@+id/TextFinished"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:text="is finished"
+            android:ellipsize="end"
+            android:textColor="#000000"
+            android:background="#FFFFFF"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:gravity="left|center"
+            android:padding="1dp"
+            android:textAlignment="center"/>
+
+ 
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/browser_actions_bg_grey"
+    android:padding="@dimen/padding_10">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/imageViewPic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:maxHeight="250dp"/>
+        <Button
+            android:id="@+id/btnBrowse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorAccent"
+            android:layout_gravity="center"
+            android:text="Select a Pic"
+            android:textColor="@color/WHITE"
+            android:textAllCaps="false"
+            android:padding="@dimen/padding_10"
+            android:layout_marginBottom="@dimen/padding_10"/>
+
+        <TextView
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Pic Info (Optional)"
+		    android:textSize="16sp"
+		    android:textColor="@android:color/black"/>
+        <com.google.android.material.textfield.TextInputLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    app:hintEnabled="false"
+		    app:counterEnabled="true"
+		    app:counterMaxLength="250">
+		    <EditText
+			    android:id="@+id/txtPrimaryFieldText"
+			    android:layout_width="match_parent"
+			    android:layout_height="45dp"
+			    android:textStyle="normal"
+			    android:textSize="16sp"
+			    android:padding="10dp"
+			    android:maxLength="250"
+			    android:textColor="@android:color/black"
+			    android:background="@drawable/rounded_edittext_white_bg"/>
+	    </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btnAddPic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/limegreen"
+            android:layout_gravity="center"
+            android:text="+ Add Pic"
+            android:textColor="@color/WHITE"
+            android:textAllCaps="false"
+            android:padding="@dimen/padding_10"
+            android:layout_marginTop="@dimen/padding_10"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_anchorGravity="center|top"
+        app:layout_anchor="@+id/txtEmail"
+        android:layout_centerInParent="true"
+        android:backgroundTint="#80000000"
+        android:background="@drawable/tileview_layout">
+        <TextView
+            android:id="@+id/txtAddPicLoading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Adding Pic..."
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:padding="5dp"/>
+        <ProgressBar
+            android:theme="@style/CircularProgressBlue"
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_height="86dp"
+            android:layout_width="86dp"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:padding="5dp"/>
+    </LinearLayout>
+</FrameLayout>

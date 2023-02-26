@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/guide_bg"
+        android:contentDescription="description" 
+        />
+    <LinearLayout
+           android:orientation="vertical"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+       >
+      <ImageView
+            android:id="@+id/img_tokstargirl"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+             android:gravity="center"
+        android:layout_weight="1"
+            android:layout_marginTop="100dp"
+            android:src="@drawable/crc_girl1"
+           />
+        <TextView
+            android:id="@+id/txtguide1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_purple"
+            android:textColor="@color/WHITE"
+            android:text="1.) Class Toks enables to enter your class notes for your purpose or to share with others."
+           />
+         <ImageView
+            android:id="@+id/img_tokstargirl1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+            android:gravity="center"
+        android:layout_weight="1"
+              android:layout_marginTop="25dp"
+            android:background="@drawable/circle_grey_stroke"
+            android:src="@drawable/crc_girl2"/> 
+          <TextView
+            android:id="@+id/txtguide2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_purple"
+            android:textColor="@color/WHITE"
+            android:text="2.) Class sets enables you to group your class toks for studying the information as is or by playing Tok Cards, Tok Match, and Tok Choice. You can also create game sets for Tokket games outside of Tokket."/>
+        <ImageView
+            android:id="@+id/img_tokstarboy1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:gravity="center"
+                android:layout_marginTop="25dp"
+        android:layout_weight="1"
+            android:background="@drawable/circle_grey_stroke"
+            android:src="@drawable/crc_guy1"/>
+          <TextView
+            android:id="@+id/txtguide3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_purple"
+            android:textColor="@color/WHITE"
+            android:text="3.) Class Groups enables you and your classmates to share your notes with each other."/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

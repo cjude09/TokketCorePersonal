@@ -1,0 +1,55 @@
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+    <com.google.android.flexbox.FlexboxLayout
+		android:layout_height="wrap_content"
+		android:layout_width="match_parent"
+		app:flexWrap="nowrap"
+        app:alignItems="center"
+        app:alignContent="center"
+        app:justifyContent="center"
+        app:layout_flexBasisPercent="100%">
+        <EditText
+            android:id="@+id/EditSearchInviteUsers"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="5dp"
+            android:hint="Search"
+            android:padding="10dp"
+            android:textStyle="normal"
+            android:textSize="14sp"
+            android:textColor = "@android:color/black"
+            android:background="@drawable/rounded_edittext_white_bg"
+            app:layout_flexBasisPercent="80%"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/placeholder_bg">
+            <Button
+                android:id="@+id/BtnSearchInviteUsers"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="search"
+                android:layout_margin="1dp"
+                android:textAllCaps="false"
+                android:textColor="@color/primary_dark"
+                android:textSize="14sp"
+                android:backgroundTint="@android:color/white"
+                app:layout_flexBasisPercent="20%"/>
+        </LinearLayout>
+    </com.google.android.flexbox.FlexboxLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerInviteUsersList"  
+        android:layout_width="match_parent"  
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingBottom="?android:attr/actionBarSize"
+        android:scrollbarStyle="outsideOverlay"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:divider="@android:color/transparent"/>
+</LinearLayout>

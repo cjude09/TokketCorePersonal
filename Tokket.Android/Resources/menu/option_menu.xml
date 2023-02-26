@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+  <!--///showAsAction="always" ///-->
+  <item
+      android:id="@+id/option_normal"
+      android:title="Normal Mode"
+      showAsAction="always"  />
+  <item
+        android:id="@+id/option_education"
+        android:title="Education Mode"
+        showAsAction="always"/>
+</menu>

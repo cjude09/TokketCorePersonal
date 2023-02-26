@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/left_menus"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+  <group android:checkableBehavior="single">
+    <item
+      android:id="@+id/leftmenu_TokGroup"
+      android:title="Tok Groups"
+      android:icon="@drawable/tokgroup_b">
+    </item>
+    <item
+      android:id="@+id/leftmenu_Set"
+      android:title="Set"
+      android:icon="@drawable/play_icon"/>
+    <item
+      android:id="@+id/leftmenu_ClassToks"
+      android:title="Class Toks"
+      android:icon="@drawable/class_b"/>
+    <!--<item
+      android:id="@+id/leftmenu_Privacy"
+      android:title="Privacy"
+      android:icon="@drawable/privacy_icon"/>-->
+    <!--<item
+      android:id="@+id/leftmenu_Theme"
+      android:title="Theme"
+      android:icon="@drawable/themes_icon128"/>-->
+    <item
+      android:id="@+id/leftmenu_Settings"
+      android:title="Settings"
+      android:icon="@drawable/settings_black_36dp">
+    </item>
+
+
+    <item
+      android:id="@+id/leftmenu_Quote"
+      android:icon="@drawable/tokgroup_b"
+      app:actionLayout="@layout/quote_sidemenu">    
+    </item>
+
+  </group>
+</menu>

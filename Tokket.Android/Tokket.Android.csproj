@@ -1,0 +1,181 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
+    <TargetFramework>net7.0-android</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+    <PackageIcon>classtoks.png</PackageIcon>
+    <MSBuildWarningsAsMessages>XA4214</MSBuildWarningsAsMessages>
+    <Platforms>AnyCPU;ARM64</Platforms>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <AndroidApplication>True</AndroidApplication>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+    <MandroidI18n />
+    <DefineConstants>TRACE;DEBUG;_CLASSTOKS;</DefineConstants>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <AndroidEnableProfiledAot>True</AndroidEnableProfiledAot>
+    <AndroidKeyStore>True</AndroidKeyStore>
+    <BundleAssemblies>false</BundleAssemblies>
+    <AndroidPackageFormat>apk</AndroidPackageFormat>
+    <AndroidUseAapt2>true</AndroidUseAapt2>
+    <AndroidCreatePackagePerAbi>false</AndroidCreatePackagePerAbi>
+    <JavaMaximumHeapSize>
+    </JavaMaximumHeapSize>
+    <AndroidSigningKeyStore>C:\Keystore\Tokket.keystore</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>tokket901</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>tokket</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>tokket901</AndroidSigningKeyPass>
+    <RunAOTCompilation>False</RunAOTCompilation>
+    <NoWarn>1701;1702;CA1416</NoWarn>
+    <RuntimeIdentifiers>android-arm;android-arm64;android-x86;android-x64</RuntimeIdentifiers>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	  <AndroidResgenClass>Resource</AndroidResgenClass>
+	  <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+	  <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+	  <AndroidApplication>True</AndroidApplication>
+	  <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+	  <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+	  <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
+	  <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+	  <AndroidLinkMode>None</AndroidLinkMode>
+	  <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+	  <MandroidI18n />
+	  <DefineConstants>TRACE;DEBUG;_CLASSTOKS;</DefineConstants>
+	  <AotAssemblies>false</AotAssemblies>
+	  <EnableLLVM>false</EnableLLVM>
+	  <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+	  <AndroidKeyStore>True</AndroidKeyStore>
+	  <BundleAssemblies>false</BundleAssemblies>
+	  <AndroidPackageFormat>aab</AndroidPackageFormat>
+	  <AndroidUseAapt2>true</AndroidUseAapt2>
+	  <AndroidCreatePackagePerAbi>false</AndroidCreatePackagePerAbi>
+	  <JavaMaximumHeapSize>
+	  </JavaMaximumHeapSize>
+	  <AndroidSigningKeyStore>C:\Keystore\Tokket.keystore</AndroidSigningKeyStore>
+	  <AndroidSigningStorePass>tokket901</AndroidSigningStorePass>
+	  <AndroidSigningKeyAlias>tokket</AndroidSigningKeyAlias>
+	  <AndroidSigningKeyPass>tokket901</AndroidSigningKeyPass>
+	  <RunAOTCompilation>False</RunAOTCompilation>
+	  <NoWarn>1701;1702;CA1416</NoWarn>
+	  <RuntimeIdentifiers>android-arm;android-arm64;android-x86;android-x64</RuntimeIdentifiers>
+  </PropertyGroup>
+  <ItemGroup>
+	<PackageReference Include="FirebaseAdmin" Version="2.3.0" />
+	<PackageReference Include="Karamunting.Android.ArthurHub.AndroidImageCropper" Version="2.8.0" />
+	<PackageReference Include="Karamunting.Android.Google.FlexboxLayout" Version="2.0.1" />
+	<PackageReference Include="Karamunting.Android.Intuit.Sdp" Version="1.0.6" />
+	<PackageReference Include="Microsoft.AppCenter" Version="5.0.1">
+	</PackageReference>
+	<PackageReference Include="Microsoft.AppCenter.Analytics" Version="5.0.1">
+	</PackageReference>
+	<PackageReference Include="Microsoft.AppCenter.Crashes" Version="5.0.1">
+	</PackageReference>
+	<PackageReference Include="Xamarin.Android.Glide" Version="4.13.2.2" />
+	<PackageReference Include="Xamarin.Android.Glide.Annotations" Version="4.13.2.2" />
+	<PackageReference Include="Xamarin.Android.Glide.DiskLruCache" Version="4.13.2.2" />
+	<PackageReference Include="Xamarin.Android.Glide.GifDecoder" Version="4.13.2.2" />
+	<PackageReference Include="Xamarin.AndroidX.Fragment" Version="1.5.2" />
+	<PackageReference Include="Xamarin.AndroidX.RecyclerView" Version="1.2.1.7" />
+	<PackageReference Include="Xamarin.AndroidX.Tracing.Tracing" Version="1.1.0.1" />
+	<PackageReference Include="Xamarin.AndroidX.VectorDrawable.Animated" Version="1.1.0.14" />
+    <PackageReference Include="Com.Airbnb.Android.Lottie" Version="4.2.2">
+    </PackageReference>
+    <PackageReference Include="Karamunting.Android.HDodenhof.CircleImageView" Version="3.1.0">
+    </PackageReference>
+    <PackageReference Include="Karamunting.Android.Intuit.Ssp" Version="1.0.6">
+    </PackageReference>
+    <PackageReference Include="Karamunting.Android.Skydoves.Balloon" Version="1.1.5">
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="6.0.0-preview.4.21253.5">
+    </PackageReference>
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="6.0.10">
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2-beta2">
+    </PackageReference>
+    <PackageReference Include="NUnit" Version="3.13.3">
+    </PackageReference>
+    <PackageReference Include="Plugin.InAppBilling" Version="6.6.1">
+    </PackageReference>
+    <PackageReference Include="Plugin.Permissions" Version="6.0.1">
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.CirclePageIndicator" Version="1.1.1">
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.PhotoView" Version="2.1.4">
+    </PackageReference>
+    <PackageReference Include="Xamarin.Android.ShimmerLayout" Version="0.5.0">
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.ConstraintLayout" Version="2.1.4.1">
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.ConstraintLayout.Solver" Version="2.0.4.9">
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.ExifInterface" Version="1.3.3.6">
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.14">
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.5.1">
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.Palette" Version="1.0.0.14">
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.Preference" Version="1.2.0.2">
+    </PackageReference>
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.3" />
+    <PackageReference Include="Xamarin.Google.Android.Material" Version="1.6.1.1">
+    </PackageReference>
+    <PackageReference Include="Xamarin.GooglePlayServices.Plus" Version="117.0.0.8">
+    </PackageReference>
+    <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+    <PackageReference Include="SQLiteNetExtensions.Async" Version="2.1.0" />
+    <PackageReference Include="SQLitePCLRaw.core" Version="2.1.0-pre20220207221914" />
+    <PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.0-pre20220207221914" />
+    <PackageReference Include="SQLitePCLRaw.provider.dynamic_cdecl" Version="2.1.0-pre20220207221914" />
+    <PackageReference Include="SQLitePCLRaw.provider.sqlite3" Version="2.1.0-pre20220207221914" />
+    <PackageReference Include="Microsoft.DotNet.UpgradeAssistant.Extensions.Default.Analyzers" Version="0.4.346202">
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+  	<ProjectReference Include="..\Tokket.Core\Tokket.Core.csproj">
+  	</ProjectReference>
+  	<ProjectReference Include="..\Tokket.Infrastructure\Tokket.Infrastructure.csproj">
+  	</ProjectReference>
+  	<ProjectReference Include="..\Tokket.Shared\Tokket.Shared.csproj">
+  	</ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Pages\InfiniteCirclePageIndicator.cs" />
+    <Compile Remove="ViewModels\Facebook\MyProfileTracker.cs" />
+    <Compile Remove="ViewModels\Listener\IOnStartDragListener.cs" />
+    <Compile Remove="Views\Interface\LoopingPageIndicator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Resources\drawable\tokket_white.png" />
+    <None Remove="Resources\drawable\tok_white.png" />
+    <None Remove="Resources\layout\activity_community_info.xml" />
+    <None Remove="Resources\layout\dialog_replicate_tok.xml" />
+    <None Remove="Resources\layout\fragment_tok_channel_toks.xml" />
+    <None Remove="Resources\layout\row_communities.xml" />
+    <None Remove="Resources\menu\menu_bottom_tok_channel.xml" />
+    <None Remove="Resources\menu\menu_tokchannel.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Resources\drawable\classtoks.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+</Project>

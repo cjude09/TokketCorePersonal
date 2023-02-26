@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">   
+
+      <LinearLayout
+        android:id="@+id/layoutOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/recyclerView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        >
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@android:color/darker_gray"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btnAddEC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/buttonGreen"
+                android:text="Add Existing Tok"/>
+        </LinearLayout>
+    </LinearLayout>
+    <io.supercharge.shimmerlayout.ShimmerLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/WHITE"
+        app:layout_constraintTop_toBottomOf="@id/btnFilter"
+         app:layout_constraintBottom_toTopOf="@id/layoutOptions"
+        android:layout_marginTop="@dimen/padding_10">
+        <!-- Adding 5 rows of placeholders -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:gravity="center">
+            <include layout="@layout/toks_placeholder_item" />
+            <include layout="@layout/toks_placeholder_item" />
+            <include layout="@layout/toks_placeholder_item" />
+            <include layout="@layout/toks_placeholder_item" />
+            <include layout="@layout/toks_placeholder_item" />
+            </LinearLayout>
+    </io.supercharge.shimmerlayout.ShimmerLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"  
+        android:layout_width="match_parent"  
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingBottom="?android:attr/actionBarSize"
+        android:scrollbarStyle="outsideOverlay"
+        android:layout_marginTop="@dimen/padding_10"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:divider="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@id/btnFilter"
+        app:layout_constraintBottom_toTopOf="@id/layoutOptions"/>
+
+    <Button
+        android:id="@+id/btnFilter"
+        style="@style/buttonMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Filter"
+        android:layout_marginEnd="5dp"
+        android:layout_marginTop="@dimen/padding_10"
+        android:layout_marginBottom="@dimen/padding_10"
+        android:padding="@dimen/padding_10"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnClose"/>
+
+    <Button
+        android:id="@+id/btnClose"
+        style="@style/buttonRed"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="X"
+        android:layout_margin="@dimen/padding_10"
+        android:padding="@dimen/padding_10"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/txtDoubleTapToAdd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Note: Double tap the tile to add the tok"
+        android:gravity="center"
+        android:textSize="16sp"    
+        android:visibility="invisible"
+        android:layout_marginStart="@dimen/padding_10"
+        android:layout_marginEnd="@dimen/padding_10"
+        app:layout_constraintStart_toStartOf="parent"  
+        app:layout_constraintEnd_toStartOf="@id/btnFilter"
+        app:layout_constraintTop_toTopOf="@id/btnFilter"
+        app:layout_constraintBottom_toBottomOf="@id/btnFilter"/>
+  
+</androidx.constraintlayout.widget.ConstraintLayout>

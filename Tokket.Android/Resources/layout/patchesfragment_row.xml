@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+        <TextView
+        android:id="@+id/TextRankLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="L1"
+        android:layout_gravity="center"
+        android:textSize="14sp"
+        android:layout_marginRight="20dp"
+        android:textColor="@android:color/black"/>
+    <ImageView
+        android:id="@+id/imgPatchesRow"
+        android:layout_width="72dp"
+        android:layout_height="60dp"
+        android:scaleType="fitCenter"
+        android:clickable="true"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_gravity="center|center"
+        android:gravity="left|center">
+        <TextView
+            android:id="@+id/TextRankTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"/>
+        <TextView
+            android:id="@+id/TextPoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+</LinearLayout>

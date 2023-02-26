@@ -1,0 +1,91 @@
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:minWidth="300dp"
+    android:layout_height="wrap_content"
+    android:paddingBottom="20dp">
+    <TextView
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:text="Options"
+        android:textSize="20sp"
+        android:padding="15dp"
+        android:textColor="@android:color/black"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"
+        android:background="#808080" />
+    <Switch
+        android:id="@+id/switchTokCardsPlayStarred"
+        android:text="Play Starred Only"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"/>
+    <Switch
+        android:id="@+id/switchTokCardsShowImages"
+        android:text="Show Images"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="15dp"
+        android:paddingTop="15dp"
+        android:checked="true"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingRight="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flip All Cards"
+                android:textSize="18sp"
+                android:paddingLeft="20dp"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:textColor="@android:color/black"/>
+            <Button
+                android:id="@+id/btnTokCardsOptionFlip"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:text="arrow-left \n arrow-right"
+                android:textSize="16sp"
+                android:layout_gravity="center|right"
+                android:gravity="center"
+                android:paddingBottom="15dp"
+                android:paddingTop="15dp"
+                android:textColor="#007bff"
+                android:background="?attr/selectableItemBackground"/>
+        </FrameLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_centerHorizontal="true"
+        android:background="#808080" />
+    <Button
+        android:id="@+id/btnTokCardsRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="redo-alt Refresh"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#007bff"/>
+</LinearLayout>

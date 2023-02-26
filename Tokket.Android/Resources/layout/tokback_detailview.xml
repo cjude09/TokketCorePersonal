@@ -1,0 +1,73 @@
+
+<ViewFlipper
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/viewFlipper_tokback"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:onClick="OnTapViewFlipperTokBack">
+    <!--TokBack Front-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:backgroundTint="@color/primary_dark"
+        android:background="@drawable/linear_border">
+        <TextView
+            android:id="@+id/lblTokBackCardFront"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_height="wrap_content"
+            android:text="Tap to show"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"/>
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp"
+            android:background="@drawable/baseline_cached_white_36dp"/>
+    </LinearLayout>
+    <!--TokBack Back-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:backgroundTint="@android:color/black"
+        android:background="@drawable/linear_border">
+        <FrameLayout
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="10"
+            android:layout_gravity="center|center">
+            <!--Scrolling is in the TokBackActivity-->
+            <!-- Ex. lblTokBackCardBack.MovementMethod = new ScrollingMovementMethod();-->
+            <!--ViewFlipper will not work when there is a scrollview-->
+            <TextView
+                android:id="@+id/lblTokBackCardBack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:scrollbars="vertical"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:textSize="15sp"
+                android:textStyle="normal"
+                android:textColor="@android:color/white"/>
+        </FrameLayout>
+        <ImageView                   
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp"
+            android:background="@drawable/baseline_cached_white_36dp"/>
+    </LinearLayout>
+</ViewFlipper>

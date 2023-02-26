@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/left_menus">
+  <group android:checkableBehavior="single">
+    <item
+      android:id="@+id/leftmenu_classtok_ClassToks"
+      android:title="Class Toks"
+      android:icon="@drawable/left_nav_classtok">
+    </item>
+    <item
+      android:id="@+id/leftmenu_classtok_ClassSets"
+      android:title="Class Sets"
+      android:icon="@drawable/left_nav_classsets">
+    </item>
+    <item
+      android:id="@+id/leftmenu_classtok_ClassGroups"
+      android:title="Groups"
+      android:icon="@drawable/left_nav_tokgroups">
+    </item>
+    <item
+      android:id="@+id/leftmenu_classtok_Invites"
+      android:title="Invites"
+      android:icon="@drawable/left_nav_invite">
+    </item>
+    <item
+      android:id="@+id/leftmenu_classtok_Guide"
+      android:title="Guide"
+      android:icon="@drawable/left_nav_guide">
+    </item>
+    <item
+      android:id="@+id/leftmenu_classtok_Folders"
+      android:title="Folders"
+      android:icon="@drawable/class_folder_b">
+    </item>
+    <item
+      android:id="@+id/leftmenu_classtok_Tokkepedia"
+      android:title="Back to Tokkepedia"
+      android:icon="@drawable/left_arrow_icon">
+    </item>
+  </group>
+</menu>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/layoutborder"
+    android:id="@+id/FileCommentLayout"
+    >
+
+  
+    <ImageView
+        android:id="@+id/viewFileComments"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        android:src="@drawable/file_24px"
+        android:contentDescription="description" />
+    <TextView
+        android:id="@+id/txtFileCommentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="File Name"
+        android:textColor="@android:color/black"
+        android:layout_weight="1"
+        android:ellipsize="none"
+        android:maxLength="8"
+        android:scrollHorizontally="false"
+            android:layout_toRightOf="@id/viewFileComments"/>
+
+</RelativeLayout>
